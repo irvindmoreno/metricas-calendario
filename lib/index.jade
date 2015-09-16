@@ -1,0 +1,12 @@
+doctype
+html
+	head
+		link(href="./css/app.css" rel="stylesheet" type="text/css")
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js")
+		script(src="./js/Mes/mes.js")
+		script(src="./js/app.js")
+	body
+		section(class="PanelDeControl")
+			each mes in ["Junio", "Julio", "Agosto", "Setiembre"]
+				include ./Mes/mes.jade 
+		div aa

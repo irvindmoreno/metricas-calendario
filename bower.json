@@ -1,0 +1,22 @@
+{
+  "name": "Daniel",
+  "version": "1.0.0",
+  "authors": [
+    "Daniel Moreno"
+  ],
+  "description": "paquetes",
+  "main": "index.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "gulp": "~3.9.0",
+    "jade": "~1.11.0",
+    "stylus": "~0.52.4"
+  }
+}

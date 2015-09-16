@@ -1,0 +1,15 @@
+mixin dibujarMes(mes)
+	div(class="Mes ")
+		div= mes
+		div(class="Mes-Dias "+mes)
+			script.
+				var mesJs = new Mes("#{mes}");
+				for(var numeroDeDia=1;numeroDeDia<mesJs.numeroDeDias+1;numeroDeDia++)
+					{mesJs.dibujarCuadro("#{mes}",numeroDeDia,"d");}
+		div(class="Mes-Numeros"+mes)
+			script.
+				for(numeroDeDia=1;numeroDeDia<mesJs.numeroDeDias+1;numeroDeDia++)
+					{mesJs.dibujarCuadro("Mes-Numeros"+"#{mes}",numeroDeDia,"n");}
+
+					
++dibujarMes(mes)
