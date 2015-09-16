@@ -17,9 +17,8 @@ mixin dibujarMes(mes)
 			script.
 				for(numeroDeDia=1;numeroDeDia<mesJs.numeroDeDias+1;numeroDeDia++)
 				{				
-					mesJs.dibujarCuadro("Mes-ticket-"+"#{mes}"+"#{ticket}",numeroDeDia,null,numeroDeDia);					
+					mesJs.dibujarCuadro("Mes-ticket-"+"#{mes}"+"#{ticket}",numeroDeDia,null,"#{ticket}");					
 				}
-
 
 					
 +dibujarMes(mes)
