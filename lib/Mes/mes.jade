@@ -1,5 +1,5 @@
 mixin dibujarMes(mes)
-	div(class="Mes ")
+	div(class="Mes")
 		div= mes
 		div(class="Mes-Dias "+mes)
 			script.
@@ -11,14 +11,7 @@ mixin dibujarMes(mes)
 				for(numeroDeDia=1;numeroDeDia<mesJs.numeroDeDias+1;numeroDeDia++)
 					{mesJs.dibujarCuadro("Mes-Numeros"+"#{mes}",numeroDeDia,"n");}
 
-		// inicio mis cuadraditos blancos de ticket		
-		each ticket in ["1","2"]
-			div(class="Mes-ticket-"+mes+ticket)
-			script.
-				for(numeroDeDia=1;numeroDeDia<mesJs.numeroDeDias+1;numeroDeDia++)
-				{				
-					mesJs.dibujarCuadro("Mes-ticket-"+"#{mes}"+"#{ticket}",numeroDeDia,null,"#{ticket}");					
-				}
+		
 
 					
 +dibujarMes(mes)

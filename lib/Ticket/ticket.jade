@@ -1,0 +1,16 @@
+div(class="Ticket Ticket-"+ticket)
+	script.
+		 var mayorTabIndexPorMes=mayorTabIndexDeTicket;
+		 var sumaDeDiasEnUnTicket=0;// total de dias de un ticket
+	each mes in meses
+		div(class="Ticket-Mes Ticket-"+ticket+"-Mes-"+mes)
+			script.
+				var mesJs = new Mes("#{mes}");
+				for(var tabIndex=mayorTabIndexPorMes;tabIndex<mesJs.numeroDeDias+mayorTabIndexPorMes;tabIndex++)
+				{
+					//$(".Ticket-"+"#{ticket}"+"-Mes-"+"#{mes}").append('<div id="'+i+'"></div>')
+					mesJs.dibujarCuadro("Ticket-"+"#{ticket}"+"-Mes-"+"#{mes}",null,"c",tabIndex);
+					sumaDeDiasEnUnTicket++;
+				} 
+				mayorTabIndexPorMes=tabIndex;				
+	script mayorTabIndexDeTicket=mayorTabIndexPorMes 

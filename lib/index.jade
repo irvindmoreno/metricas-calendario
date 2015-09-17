@@ -7,6 +7,15 @@ html
 		script(src="./js/app.js")
 	body
 		section(class="PanelDeControl")
-			each mes, index  in ["Junio", "Julio", "Agosto", "Setiembre"]				
-				include ./Mes/mes.jade 
-		div aecec
+			//Mostrare La Cabecera de los meses
+			div(class="Meses-Cabecera")
+				- meses = ["Junio", "Julio", "Agosto", "Setiembre"]
+				each mes in meses			
+					include ./Mes/mes.jade
+			// Mostrare las Casillas De Los tickets
+			div(class="Tickets")
+				- tickets = ["1","2","3","5","6","7","8","9","10"]
+				script var mayorTabIndexDeTicket=1;//Tendra el mayor valor de tabIndex por ticket
+				each ticket in tickets
+					include ./Ticket/ticket.jade
+		div asasdsaas
